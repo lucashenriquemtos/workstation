@@ -1,0 +1,8 @@
+- name: Install Docker Latest
+  dnf:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker-ce
+    - python-docker-py
+    - python-pip

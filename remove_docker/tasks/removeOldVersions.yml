@@ -1,0 +1,15 @@
+- name: Remove Docker OldVersions
+      package:
+        name: "{{ docker }}"
+        state: absent
+      loop:
+        - docker 
+        - docker-client
+        - docker-common
+        - docker-client-latest
+        - docker-latest
+        - docker-latest-logrotate
+        - docker-logrotate
+        - docker-selinux
+        - docker-engine-selinux
+        - docker-engine
